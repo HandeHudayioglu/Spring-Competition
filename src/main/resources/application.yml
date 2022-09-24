@@ -1,16 +1,15 @@
 server:
-  port: 9090
+  port: ${SERVERPORT}
 
 spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/competitionDB
-    username: postgres
-    password: Hande0808
-  jpa:
-    hibernate:
-      ddl-auto: create
-    show-sql: true
-    properties:
+    datasource:
+      url: ${DBURL}
+      username: ${DBUSERNAME}
+      password: ${DBPASSWORD}
+      driver-class-name: org.postgresql.Driver
+    jpa:
       hibernate:
-        format_sql: true
+        ddl-auto: update
+      show-sql: true
+
+
